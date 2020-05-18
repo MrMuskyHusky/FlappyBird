@@ -19,10 +19,16 @@ namespace FlappyBird
         void Update()
         {
             // Check for mouse down
-            if (Input.GetMouseButtonDown(0))
+
+            if (Input.GetButtonDown("Jump"))            
             {
                 // Flap the bird
                 bird.Flap();
+            }
+
+            if (Input.GetButtonDown("Fire1"))
+            {
+                //Damage object
             }
         }
     }
