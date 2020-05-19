@@ -804,8 +804,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972441685}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.067, y: 0.558, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.187, y: 0.558, z: 0}
+  m_LocalScale: {x: 1.174956, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 481693553}
   m_RootOrder: 0
@@ -1173,15 +1173,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438164882}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a54a82f040ef92348b7b99eb7c73ecd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  columnPrefab: {fileID: 1213266845366528, guid: 81e82d669e90d1f4186aba883f5d006f,
+  columnPrefab: {fileID: 3184183635970714039, guid: ce7b54615bef3df498a8501e0e0bba70,
     type: 3}
   columnPoolSize: 5
-  spawnRate: 3
+  spawnRate: 5
   columnMin: -1
   columnMax: 3.5
   standbyPos: {x: -15, y: -25, z: 0}
@@ -1335,6 +1335,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 898114601}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1745217685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745217684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e65c04330598504b90cf494adedb24d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1745217686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1347,7 +1359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e5db3893019f0e408482d80a64f9b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upForce: 7
+  upForce: 5
 --- !u!95 &1745217687
 Animator:
   serializedVersion: 3
