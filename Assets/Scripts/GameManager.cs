@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 namespace FlappyBird
 {
@@ -15,6 +17,8 @@ namespace FlappyBird
         public delegate void ScoreAddedCallback(int score);
         public ScoreAddedCallback scoreAdded;
 
+        public GameObject endScreen;
+
         // Use this for initialization
         void Awake()
         {
@@ -28,12 +32,19 @@ namespace FlappyBird
             }
         }
 
+        private void Update()
+        {
+            if (gameOver)
+            { 
+            endScreen.SetActive(true);
+            }
+        }
+
         public void BirdScored()
         {
             // The bird cant score if there is a game over
             if(gameOver)
-            {
-                // Exit the function
+            {               
                 return;
             }
 
@@ -52,6 +63,12 @@ namespace FlappyBird
         {
             // Set game over to true
             gameOver = true;
+            
+        }
+
+        public void Restart()
+        {
+            SceneManager.LoadScene(0);
         }
     }
 }
