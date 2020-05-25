@@ -721,7 +721,7 @@ MonoBehaviour:
   - {fileID: 21300082, guid: 6456bfa6454efbb4e973cc1a0bf8f8bf, type: 3}
   scoreTextPrefab: {fileID: 1929453066363266, guid: f590efd0b1bb1a34482891b64852c37e,
     type: 3}
-  standbyPos: {x: -15, y: 15, z: 0}
+  standbyPos: {x: 10, y: 0, z: 0}
   maxDigits: 5
 --- !u!4 &918733816 stripped
 Transform:
@@ -1128,7 +1128,6 @@ GameObject:
   - component: {fileID: 1438164883}
   - component: {fileID: 1438164884}
   - component: {fileID: 1438164885}
-  - component: {fileID: 1438164886}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1178,30 +1177,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54a82f040ef92348b7b99eb7c73ecd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  columnPrefab: {fileID: 3184183635970714039, guid: ce7b54615bef3df498a8501e0e0bba70,
-    type: 3}
+  columnPrefab:
+  - {fileID: 1213266845366528, guid: 81e82d669e90d1f4186aba883f5d006f, type: 3}
+  - {fileID: 3184183635970714039, guid: ce7b54615bef3df498a8501e0e0bba70, type: 3}
   columnPoolSize: 5
   spawnRate: 5
   columnMin: -1
   columnMax: 3.5
   standbyPos: {x: -15, y: -25, z: 0}
   spawnXPos: 10
---- !u!114 &1438164886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1438164882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a133111078aff344ba6512c051d0cea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameOver: 0
-  scrollSpeed: -1.5
-  score: 0
-  endScreen: {fileID: 738020720}
+  columns: []
+  currentColumn: 0
 --- !u!1001 &1459813874
 PrefabInstance:
   m_ObjectHideFlags: 0

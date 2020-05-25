@@ -6,16 +6,16 @@ namespace FlappyBird
 {
     public class ColumnSpawner : MonoBehaviour
     {
-        public GameObject columnPrefab;     // The column prefab we want to spawn
-        public int columnPoolSize = 5;      // How many columns to keep on standby
+        public GameObject[] columnPrefab;     // The column prefab we want to spawn
+        public int columnPoolSize = 5;        // How many columns to keep on standby
         public float spawnRate = 3f;        // How quickly each columns spawn
         public float columnMin = -1f;       // Minimum y value of the column position
         public float columnMax = 3.5f;      // Maximum y value of the column position
         public Vector3 standbyPos = new Vector3(-15, -25); // Holding position for the unused columns offscreen
         public float spawnXPos = 10f;
 
-        private GameObject[] columns;       // Collection of pooled columns
-        private int currentColumn = 0;      // Index of the current column in the collection
+        public GameObject[] columns;       // Collection of pooled columns
+        public int currentColumn = 0;      // Index of the current column in the collection
         private float spawnTimer = 0f;
 
         // Use this for initialization
@@ -27,7 +27,7 @@ namespace FlappyBird
             for (int i = 0; i < columnPoolSize; i++)
             {
                 // ... and create the individual columns
-                columns[i] = Instantiate(columnPrefab, standbyPos, Quaternion.identity);
+                columns[i] = Instantiate(columnPrefab[Random.Range(0, columnPrefab.Length)], standbyPos, Quaternion.identity);
             }
         }
 
