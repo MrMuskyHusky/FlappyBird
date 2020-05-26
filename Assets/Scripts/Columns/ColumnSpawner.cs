@@ -63,6 +63,10 @@ namespace FlappyBird
             {
                 // ... set it back to zero
                 currentColumn = 0;
+                for (int i = 0; i < columnPoolSize; i++)
+                {
+                    columns[i] = Instantiate(columnPrefab[Random.Range(0, columnPrefab.Length)], standbyPos, Quaternion.identity);
+                }
             }
         }
     }
