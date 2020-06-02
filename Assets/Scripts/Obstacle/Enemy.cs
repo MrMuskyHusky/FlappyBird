@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
 
     public GameObject healthCanvas;
     public Image healthBar;
+    public AudioSource audioSource;
     void Start()
     {
         maxHealth = curHealth;
@@ -33,6 +34,7 @@ public class Enemy : MonoBehaviour
     {
         curHealth -= amount;
         healthBar.fillAmount = curHealth;
+        audioSource.Play();
         if (curHealth <= 0f)
         {
             Die();

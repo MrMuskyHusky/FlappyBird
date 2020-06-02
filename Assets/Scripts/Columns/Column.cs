@@ -13,7 +13,7 @@ namespace FlappyBird
             {
                 // Then the bird scored
                 GameManager.Instance.BirdScored();
-            }  
+            }
         }
     }
 }
